@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100f14">
+  <title>Birthday Protocol // Restricted Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="scanlines"></div>
+  <div class="screen-noise"></div>
+
+  <main class="app">
+
+    <!-- SCREEN 1: HACKER LOADER -->
+    <section class="screen active" id="loading-screen">
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-label">BIRTHDAY_PROTOCOL.exe</span>
+          <span class="terminal-version">v21.0</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="system-tag">[ UNAUTHORIZED BIRTHDAY ACCESS ]</p>
+
+          <h1 class="glitch-title" data-text="INITIALIZING...">
+            INITIALIZING<span class="cursor">_</span>
+          </h1>
+
+          <div class="log-output" id="boot-logs" aria-live="polite"></div>
+
+          <div class="progress-info">
+            <span id="loading-status">BOOTING SYSTEM</span>
+            <span id="loading-percent">00%</span>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+
+          <p class="terminal-warning">
+            ⚠ RESTRICTED TO ONE VERY SPECIFIC BHONDU.
+          </p>
+        </div>
+      </div>
+      <p class="bottom-note">A completely unnecessary security system for a very necessary person.</p>
+    </section>
+
+
+    <!-- SCREEN 2: USERNAME -->
+    <section class="screen" id="username-screen">
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-label">IDENTITY_CHECK.sys</span>
+          <span class="secure-tag">LOCKED</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="system-tag">STEP 01 / IDENTITY VERIFICATION</p>
+          <div class="big-lock">⌁</div>
+
+          <h1 class="screen-title">Who goes there?</h1>
+          <p class="screen-description">
+            Identify yourself, birthday girl. No random people allowed.
+          </p>
+
+          <form id="username-form" autocomplete="off">
+            <label for="username">ENTER YOUR FULL NAME</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Your name goes here..."
+              autocomplete="off"
+              required
+            >
+            <p class="input-hint">Hint: It's literally your own name. 💀</p>
+            <p class="error-message" id="username-error" aria-live="polite"></p>
+            <button class="primary-button" type="submit">
+              VERIFY IDENTITY <span>→</span>
+            </button>
+          </form>
+
+          <p class="terminal-footer">IDENTITY DATABASE // VERY LIMITED EDITION</p>
+        </div>
+      </div>
+      <p class="bottom-note">Please don't forget your own name. That would be embarrassing.</p>
+    </section>
+
+
+    <!-- SCREEN 3: DATE OF BIRTH -->
+    <section class="screen" id="dob-screen">
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-label">DOB_AUTH.sys</span>
+          <span class="secure-tag">STEP 02</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="system-tag">STEP 02 / DATE OF BIRTH</p>
+          <div class="big-lock">◷</div>
+
+          <h1 class="screen-title">Prove your age.</h1>
+          <p class="screen-description">
+            Enter your date of birth to continue.
+          </p>
+
+          <form id="dob-form" autocomplete="off">
+            <label for="dob">DATE OF BIRTH (DD/MM/YY)</label>
+            <input
+              id="dob"
+              name="dob"
+              type="text"
+              inputmode="numeric"
+              placeholder="DD/MM/YY"
+              maxlength="8"
+              autocomplete="off"
+              required
+            >
+            <p class="input-hint">Format: xx/xx/xx. Don't get this wrong. 😭</p>
+            <p class="error-message" id="dob-error" aria-live="polite"></p>
+            <button class="primary-button" type="submit">
+              CHECK MY DOB <span>→</span>
+            </button>
+          </form>
+
+          <p class="terminal-footer">BIRTHDAY RECORD // CLASSIFIED</p>
+        </div>
+      </div>
+      <p class="bottom-note">The system is judging you. Probably.</p>
+    </section>
+
+
+    <!-- SCREEN 4: AGE VERIFICATION -->
+    <section class="screen" id="age-screen">
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-label">AGE_VERIFICATION.sys</span>
+          <span class="secure-tag">STEP 03</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="system-tag">STEP 03 / ADULT DETECTED?</p>
+
+          <div class="age-number">21<span>?</span></div>
+          <h1 class="screen-title">Level 21 unlocked.</h1>
+          <p class="screen-description">
+            Select your new age, madam.
+          </p>
+
+          <form id="age-form">
+            <label for="age">I AM TURNING...</label>
+            <select id="age" name="age" required>
+              <option value="" disabled selected>Choose your age</option>
+              <option value="18">18 years</option>
+              <option value="19">19 years</option>
+              <option value="20">20 years</option>
+              <option value="21">21 years</option>
+              <option value="22">22 years</option>
+              <option value="23">23 years</option>
+            </select>
+
+            <p class="error-message" id="age-error" aria-live="polite"></p>
+            <button class="primary-button" type="submit">
+              CONFIRM AGE <span>→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SCREEN 5: FINAL INTERROGATION -->
+    <section class="screen" id="confirm-screen">
+      <div class="terminal-card interrogation-card">
+        <div class="terminal-top">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-label">FINAL_INTERROGATION.exe</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="system-tag">⚠ FINAL CONFIRMATION REQUIRED</p>
+          <div class="question-mark">?!</div>
+
+          <h1 class="screen-title">
+            PAKKA 21 SAAL KI HO GAYI?
+          </h1>
+
+          <p class="screen-description">
+            Ek baar aur soch le. Baad mein refund nahi milega. 💀
+          </p>
+
+          <div class="button-stack">
+            <button class="primary-button" id="confirm-yes" type="button">
+              HAAN BHAI, PAKKA! 😤
+            </button>
+            <button class="secondary-button" id="confirm-no" type="button">
+              NAHI, DOBARA CHECK KARO
+            </button>
+          </div>
+
+          <p class="error-message" id="confirm-error" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SCREEN 6: BIRTHDAY CELEBRATION -->
+    <section class="screen celebration-screen" id="celebration-screen">
+      <div class="celebration-content">
+        <p class="celebration-tag">ACCESS GRANTED ✓</p>
+
+        <div class="party-emoji" aria-hidden="true">🎉 🎈 🎂</div>
+
+        <p class="little-intro">SYSTEM OVERRIDE SUCCESSFUL</p>
+
+        <h1 class="birthday-heading">
+          HAPPY<br>
+          BIRTHDAY<br>
+          <span>BHONDUUUU!</span>
+        </h1>
+
+        <p class="birthday-subtitle">
+          Finally. Itni verification ke baad toh cake banta hai. ❤️
+        </p>
+
+        <div class="celebration-stickers">
+          <span>21 & UNSTOPPABLE</span>
+          <span>OFFICIALLY OLDER</span>
+          <span>STILL A BHONDU</span>
+        </div>
+
+        <button class="party-button" id="continue-button" type="button">
+          CHAL, AB CAKE LAATE HAIN 🎂
+          <span>→</span>
+        </button>
+
+        <p class="celebration-footer">
+          MADE WITH LOVE, CODE & THODI SI BEIZZATI ♡
+        </p>
+      </div>
+
+      <div class="confetti-container" id="confetti-container" aria-hidden="true"></div>
+    </section>
+    
+<!-- ==========================================
+     SCREEN 7 — CAKE REVEAL
+=========================================== -->
+<section class="screen birthday-stage" id="cake-screen">
+  <div class="stage-content">
+    <p class="scrapbook-label">THE BIRTHDAY DEPARTMENT™</p>
+
+    <h1 class="stage-heading">Okay, birthday girl...</h1>
+    <p class="stage-description">
+      Itni verification karwa li. Ab cake toh banta hai, madam. 🎂
+    </p>
+
+    <div class="cake-area">
+      <div class="cake-placeholder" id="cake-placeholder">
+        <div class="cake-gift-icon">🎂</div>
+        <p>CAKE NOT FOUND.</p>
+        <small>Probably being dramatic. Just like someone.</small>
+      </div>
+
+      <div class="cake-scene" id="cake-scene" aria-label="Birthday cake">
+        <div class="cake-sparkles" aria-hidden="true">✦　✧　✦</div>
+
+        <div class="cake">
+          <div class="candle-row">
+            <div class="candle">
+              <span class="flame"></span>
+              <span class="wick"></span>
+              <span class="candle-stick"></span>
+            </div>
+            <div class="candle candle-two">
+              <span class="flame"></span>
+              <span class="wick"></span>
+              <span class="candle-stick"></span>
+            </div>
+            <div class="candle candle-three">
+              <span class="flame"></span>
+              <span class="wick"></span>
+              <span class="candle-stick"></span>
+            </div>
+          </div>
+
+          <div class="cake-top">
+            <span>HBD</span>
+            <span>♡</span>
+            <span>21</span>
+          </div>
+          <div class="cake-middle">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <div class="cake-cut-line" id="cake-cut-line"></div>
+        <div class="cake-confetti" aria-hidden="true">✦　♡　✧　★</div>
+      </div>
+    </div>
+
+    <p class="cake-status" id="cake-status" aria-live="polite">
+      Cake department is currently closed.
+    </p>
+
+    <div class="stage-actions">
+      <button class="party-button" id="reveal-cake-button" type="button">
+        CAKE LAO BHAI 🎂 →
+      </button>
+
+      <button class="party-button hidden" id="blow-candles-button" type="button">
+        CHAL, WISH MAANG! 🕯️
+      </button>
+
+      <button class="party-button hidden" id="cut-cake-button" type="button">
+        CUT THE CAKE ✂️🎂
+      </button>
+
+      <button class="party-button hidden" id="cake-next-button" type="button">
+        AB GIFT KHOL → 💌
+      </button>
+    </div>
+
+    <p class="stage-footnote">One wish. No refunds. No extra cake demands.</p>
+  </div>
+</section>
+
+
+<!-- ==========================================
+     SCREEN 8 — BIRTHDAY LETTER
+=========================================== -->
+<section class="screen birthday-stage letter-stage" id="letter-screen">
+  <div class="stage-content">
+    <p class="scrapbook-label">A LITTLE SOMETHING FOR YOU ♡</p>
+
+    <h1 class="stage-heading">Oi, Darshika!</h1>
+    <p class="stage-description">
+      Gifts khol liye honge na ab tak, madam? 👀
+    </p>
+
+    <div class="letter-envelope" id="letter-envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-front">
+        <span class="envelope-heart">♡</span>
+        <p>TO: THE BHONDU</p>
+        <small>VERY IMPORTANT BIRTHDAY MAIL</small>
+      </div>
+    </div>
+
+    <button class="party-button" id="open-letter-button" type="button">
+      OPEN YOUR LETTER 💌 →
+    </button>
+
+    <article class="birthday-letter hidden" id="birthday-letter">
+      <div class="letter-tape">A LETTER FOR YOU ♡</div>
+
+      <p class="letter-greeting">Happy Birthday, Bhonduuuu! 🎂❤️</p>
+
+      <p>
+        Especially tere liye banayi hai ye chhoti si website.
+        Accha, gifts open kar liye na ab tak?
+      </p>
+
+      <p>
+        Diary kaisi lagi? Uska cover teri red kurti se match kar raha tha,
+        toh maine socha wahi cover le leta hoon. 😂❤️
+      </p>
+
+      <p>
+        Aur teddy kaisa laga? Chhota sa hai na? Hehe. 🧸🎸
+      </p>
+
+      <p class="letter-emphasis">
+        Waise ek baat samajh nahi aa rahi...
+        maine tujhe ye teddy diya hi kyun? 🤨
+      </p>
+
+      <p class="letter-small-note">
+        Iska jawab neeche diye gaye stamp ke peeche chhupa hai.
+      </p>
+
+      <div class="stamp-zone">
+        <p class="stamp-instruction">MESSAGE UNLOCK KARNE KE LIYE STAMP MAARO 👇</p>
+
+        <button class="fevigum-stamp" id="fevigum-stamp" type="button"
+          aria-label="Press the birthday message stamp">
+          <span class="stamp-top">SPECIAL</span>
+          <span class="stamp-main">KHOL DE!</span>
+          <span class="stamp-bottom">APPROVED ♡</span>
+        </button>
+      </div>
+
+      <div class="stamp-message hidden" id="stamp-message">
+        <p class="roast-label">OFFICIAL TEDDY INVESTIGATION REPORT</p>
+
+        <p>
+          Pehli baat toh teddy ke haath mein guitar hai,
+          kitna cute hai. 🎸🧸
+        </p>
+
+        <p class="roast-punchline">
+          Aur doosri baat... itna chhota sa hai,
+          bilkul teri height jaisa.
+          HAHAHAHAHAHAHA 😭😭
+        </p>
+
+        <p>Happy birthday, shortie— AREY SORRY, DARSHIKA. ❤️</p>
+      </div>
+
+      <div class="final-gift hidden" id="final-gift">
+        <div class="final-gift-stars">✦ ★ ✧ ♡ ✦</div>
+
+        <h2>Accha sun, ek last baat...</h2>
+
+        <p>
+          Gifts toh de hi diye hain, toh socha tere liye kuch virtually
+          bhi banaun. Isliye ye website banayi hai.
+        </p>
+
+        <p>
+          I hope tujhe pasand aayegi. Aur haan, poori website explore
+          karna, samjhi? Itni mehnat se banayi hai maine. 🙄❤️
+        </p>
+
+        <p>
+          Chal, ab maze kar, apna din enjoy kar aur zyada drama mat
+          karna... although mujhe pata hai tu nahi maanegi.
+        </p>
+
+        <p class="final-birthday-line">
+          Once again, happiest birthday, Darshika. ♡
+        </p>
+
+        <a
+          class="archive-link"
+          href="https://birthday-archive-rho.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ASLI WEBSITE DEKHNE KE LIYE YAHAAN CLICK KAR →
+        </a>
+
+        <p class="archive-link-note">
+          YOUR VERY OWN FRIENDSHIP ARCHIVE. GO EXPLORE IT! ❤️
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+  </main>
+
+  <noscript>
+    This birthday surprise needs JavaScript enabled.
+  </noscript>
+</body>
+</html>
